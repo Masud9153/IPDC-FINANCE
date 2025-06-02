@@ -495,9 +495,20 @@ min-height: 820px;
   margin-top: 20px;
 }
 
+@media screen and ( max-width : 769px ) {
+  .card-1{
+    justify-content: center;
+  }
+  .card-2{
+    justify-content: center;
+  }
+}
+
+
+
 @media screen and ( max-width : 426px ) {
    .col-30{
-    width: 110px;
+    width: 145px;
    } 
    .card-1{
     justify-content: space-evenly;
@@ -526,13 +537,10 @@ min-height: 820px;
   }
 }
 
-@media screen and ( max-width : 769px ) {
-  .card-1{
-    justify-content: center;
-  }
-  .card-2{
-    justify-content: center;
-  }
+@media screen and ( max-width : 330px ) {
+  .col-30{
+    width: 120px;
+   }
 }
 
 
