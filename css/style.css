@@ -1,0 +1,145 @@
+@font-face {
+  font-family: Metropolis;
+  src: url(./assets/Metropolis-Regular.otf);
+}
+@font-face {
+  font-family: Metropolis-Bold;
+  src: url(./assets/Metropolis-Bold.otf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* COMMON CLASSES */
+body {
+  font-family: Metropolis;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: rgba(1, 1, 1, 1);
+}
+li {
+  list-style: none;
+}
+
+/* NAVBAR SECTION */
+.header {
+  /* position: absolute; */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.nav-logo > img {
+  width: 109px;
+  height: 53px;
+}
+
+.header > div > div {
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-right {
+  display: flex;
+  /* flex-direction: row; */
+  gap: 180px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.nav-right > ul {
+  display: flex;
+  /* flex-direction: row; */
+  gap: 41px;
+  font-size: 12px;
+}
+
+.nav-btn {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.nav-btn > a {
+  font-size: 12px;
+}
+
+.btn {
+  background: rgba(237, 1, 127, 1);
+  display: flex;
+  color: white;
+  border-radius: 4px;
+  padding: 8px 20px;
+}
+.ham-menu {
+  display: none;
+}
+
+/* bannar1 */
+.banner-section {
+  background: url("./assets/Frame\ 31.png") no-repeat center center/contain;
+  min-height: 820px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-content{
+  display: flex;
+  flex-wrap: wrap;
+}
+.banner-content-img>img{
+  display: none;
+
+}
+
+.bg-banner {
+  width: 710px;
+  height: 682px;
+   position: absolute; 
+  top: 0;
+  right: 0;
+  background: #FFEAF5;
+  z-index: -1;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .ham-menu {
+    display: block;
+  }
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    flex-basis: 100%;
+  }
+  .nav-right > ul {
+    flex-direction: column;
+  }
+  .nav-btn {
+    flex-direction: column;
+  }
+  #menu:checked ~ .nav-right,
+  #menu:checked ~ .nav-btn {
+    display: flex;
+    gap: 30px;
+    text-align: center;
+  }
+}
